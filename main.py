@@ -90,6 +90,7 @@ def get_random_url(query):
     # 3. noteフィールドの検索
     results = [item['url'] for item in media_data if query in item.get("note", [])]
     if results: return random.choice(results)
+
     return None
 
 @client.event
